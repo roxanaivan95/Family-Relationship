@@ -1,0 +1,294 @@
+<fapte>
+		<parinte>
+			<nume>Elena</nume>
+			<sex>F</sex>
+			<copil>
+				<nume>Andreea</nume>
+				<sex>F</sex>
+			</copil>
+			<copil>
+				<nume>Mihai</nume>
+				<sex>M</sex>
+			</copil>
+			<copil>
+				<nume>Cristina</nume>
+				<sex>F</sex>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Cristian</nume>
+			<sex>M</sex>
+			<copil>
+				<nume>Andreea</nume>
+				<sex>F</sex>
+			</copil>
+			<copil>
+				<nume>Mihai</nume>
+				<sex>M</sex>
+			</copil>
+			<copil>
+				<nume>Cristina</nume>
+				<sex>F</sex>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Mihai</nume>
+			<sex>M</sex>
+			<copil>
+				<nume>Aurel</nume>
+				<sex>M</sex>
+				<frate>Violeta</frate>
+			</copil>
+			<copil>
+				<nume>Violeta</nume>
+				<sex>F</sex>
+				<frate>Aurel</frate>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Evelina</nume>
+			<sex>F</sex>
+			<copil>
+				<nume>Aurel</nume>
+				<sex>M</sex>
+				<frate>Violeta</frate>
+			</copil>
+			<copil>
+				<nume>Violeta</nume>
+				<sex>F</sex>
+				<frate>Aurel</frate>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Cristina</nume>
+			<sex>F</sex>
+			<copil>
+				<nume>Claudiu</nume>
+				<sex>M</sex>
+				<frate>Noemi</frate>
+			</copil>
+			<copil>
+				<nume>Noemi</nume>
+				<sex>F</sex>
+				<frate>Claudiu</frate>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Ionut</nume>
+			<sex>M</sex>
+			<copil>
+				<nume>Claudiu</nume>
+				<sex>M</sex>
+				<frate>Noemi</frate>
+			</copil>
+			<copil>
+				<nume>Noemi</nume>
+				<sex>F</sex>
+				<frate>Claudiu</frate>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Andrei</nume>
+			<sex>M</sex>
+			<copil>
+				<nume>Ovidiu</nume>
+				<sex>M</sex>
+				<frate>Loredana</frate>
+			</copil>
+			<copil>
+				<nume>Loredana</nume>
+				<sex>F</sex>
+				<frate>Ovidiu</frate>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Antoaneta</nume>
+			<sex>F</sex>
+			<copil>
+				<nume>Ovidiu</nume>
+				<sex>M</sex>
+				<frate>Loredana</frate>
+			</copil>
+			<copil>
+				<nume>Loredana</nume>
+				<sex>F</sex>
+				<frate>Ovidiu</frate>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Andreea</nume>
+			<sex>F</sex>
+			<copil>
+				<nume>Andrei</nume>
+				<sex>M</sex>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Viorel</nume>
+			<sex>M</sex>
+			<copil>
+				<nume>Andrei</nume>
+				<sex>M</sex>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Violeta</nume>
+			<sex>F</sex>
+			<copil>
+				<nume>Stefan</nume>
+				<sex>M</sex>
+			</copil>
+		</parinte>
+
+		<parinte>
+			<nume>Alex</nume>
+			<sex>M</sex>
+			<copil>
+				<nume>Stefan</nume>
+				<sex>M</sex>
+			</copil>
+		</parinte>
+</fapte>
+
+<reguli>
+	<regula>
+		<if>
+			<pers>X</pers>
+			<rel>mama lui</rel>
+			<pers>Y</pers>
+		</if>
+		<and>
+			<pers>Y</pers>
+			<rel>parintele lui</rel>
+			<pers>Z</pers>
+		</and>
+		<then>
+			<pers>X</pers>
+			<rel>bunica lui</rel>
+			<pers>Z</pers>
+		</then>
+	</regula>
+
+	<regula>
+		<if>
+			<pers>X</pers>
+			<rel>tatal lui</rel>
+			<pers>Y</pers>
+		</if>
+		<and>
+			<pers>Y</pers>
+			<rel>parintele lui</rel>
+			<pers>Z</pers>
+		</and>
+		<then>
+			<pers>X</pers>
+			<rel>bunicul lui</rel>
+			<pers>Z</pers>
+		</then>
+	</regula>
+
+	<regula>
+		<if>
+			<pers>A</pers>
+			<rel>mama lui</rel>
+			<pers>X</pers>
+		</if>
+		<and>
+			<pers>A</pers>
+			<rel>mama lui</rel>
+			<pers>Y</pers>
+		</and>
+
+		<then>
+			<pers>X</pers>
+			<rel>frate cu</rel>
+			<pers>Y</pers>
+		</then>
+	</regula>
+
+	<regula>
+		<if>
+			<pers>X</pers>
+			<sex>M</sex>
+		</if>
+		<and>
+			<pers>Y</pers>
+			<rel>mama lui</rel>
+			<pers>Z</pers>
+		</and>
+		<and>
+			<pers>X</pers>
+			<rel>tatal lui</rel>
+			<pers>Z</pers>
+		</and>
+		<then>
+			<pers>X</pers>
+			<rel>sot cu</rel>
+			<pers>Y</pers>
+		</then>
+	</regula>
+
+	<regula>
+		<if>
+			<pers>X</pers>
+			<sex>F</sex>
+		</if>
+		<and>
+			<pers>X</pers>
+			<rel>frate cu</rel>
+			<pers>Z</pers>
+		</and>
+		<and>
+			<pers>Z</pers>
+			<rel>parintele lui</rel>
+			<pers>Y</pers>
+		</and>
+		
+		<then>
+			<pers>X</pers>
+			<rel>matusa lui</rel>
+			<pers>Y</pers>
+		</then>
+	</regula>
+
+	<regula>
+		<if>
+			<pers>X</pers>
+			<sex>M</sex>
+		</if>
+		<and>
+			<pers>X</pers>
+			<rel>frate cu</rel>
+			<pers>Z</pers>
+		</and>
+		<and>
+			<pers>Z</pers>
+			<rel>parintele lui</rel>
+			<pers>Y</pers>
+		</and>
+		
+		<then>
+			<pers>X</pers>
+			<rel>matusa lui</rel>
+			<pers>Y</pers>
+		</then>
+	</regula>
+
+</reguli>
+
+
+
+
+
+
+
